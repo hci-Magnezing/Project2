@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" id="home-page">
+<head>
+  <title>Log In to Company Inc.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="assets/css/screen.css" />
+</head>
+<body>
+  <header id="header">
+    <h1>Company Inc.</h1>
+  </header>
+
+  <main id="main">
+    <form name="login" action="shipping/." aria-labelledby="login-label" method="get">
+      <h2 id="login-label">Log Into or Create Account</h2>
+
+      <fieldset name="returning">
+        <ol>
+          <li>
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email" required/>
+          </li>
+          <li>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required/>
+          </li>
+          <li>
+            <input type="checkbox" name="create" id="create" />
+            <label for="create">I need to create an account</label>
+          </li>
+        </ol>
+      </fieldset>
+
+      <fieldset name="new">
+        <ol>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required/>
+          </li>
+          <li>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" id="birthday" required/>
+          </li>
+          <li>
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" id="phone" required/>
+            </li>
+        </ol>
+      </fieldset>
+
+      <button type="submit">Log In</button>
+
+    </form>
+      <a id="to-shipping" href="shipping/.">Continue to Checkout as Guest</a>
+  </main>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
