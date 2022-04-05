@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" id="shipping-page">
+<head>
+  <title>Shipping</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+</head>
+<body>
+  <header id="header">
+    <h1>Company Inc.</h1>
+  </header>
+
+  <main id="main">
+    <form name="shipping-info" action="../billing/" aria-labelledby="shipping-form-label" method="get">
+      <h2 id="shipping-form-label">Shipping Address</h2>
+
+      <fieldset name="shipping">
+        <ul>
+          <li>
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" required/>
+          </li>
+          <li>
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" required/>
+          </li>
+          <li>
+            <label for="company">Company(Optional)</label>
+            <input type="text" name="company" id="company"/>
+          </li>
+          <li>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" required/>
+          </li>
+          <li>
+            <label for="apartment">Apartment(Optional)</label>
+            <input type="text" name="apartment" id="apartment"/>
+          </li>
+          <li>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" required/>
+          </li>
+          <li>
+            <label for="state">State</label>
+            <select name="state" id="state" required>
+                <option value="">Alabama</option>
+                <option value="">Alaska</option>
+                <option value="">Arizona</option>
+                <option value="">Arkansas</option>
+                <option value="">California</option>
+                <option value="">Colorado</option>
+                <option value="">Connecticut</option>
+                <option value="">Delaware</option>
+                <option value="">District Of Culumbia</option>
+                <option value="">Florida</option>
+                <option value="">Georgia</option>
+                <option value="">Hawaii</option>
+                <option value="">Idaho</option>
+                <option value="">Illinois</option>
+                <option value="">Indiana</option>
+                <option value="">Iowa</option>
+                <option value="">Kansas</option>
+                <option value="">Kentucky</option>
+                <option value="">Louisiana</option>
+                <option value="">Maine</option>
+                <option value="">Maryland</option>
+                <option value="">Massachusetts</option>
+                <option value="">Michigan</option>
+                <option value="">Minnesota</option>
+                <option value="">Mississippi</option>
+                <option value="">Missouri</option>
+                <option value="">Montana</option>
+                <option value="">Nebraska</option>
+                <option value="">Nevada</option>
+                <option value="">New Hampshire</option>
+                <option value="">New Jersey</option>
+                <option value="">New Mexico</option>
+                <option value="">New York</option>
+                <option value="">North Carulina</option>
+                <option value="">North Dakota</option>
+                <option value="">Ohio</option>
+                <option value="">Oklahoma</option>
+                <option value="">Oregon</option>
+                <option value="">Pennsylvania</option>
+                <option value="">Rhode Island</option>
+                <option value="">South Carulina</option>
+                <option value="">South Dakota</option>
+                <option value="">Tennessee</option>
+                <option value="">Texas</option>
+                <option value="">Utah</option>
+                <option value="">Vermont</option>
+                <option value="">Virginia</option>
+                <option value="">Washington</option>
+                <option value="">West Virginia</option>
+                <option value="">Wisconsin</option>
+                <option value="">Wyoming</option>
+              </select>
+          </li>
+          <li>
+            <input type="checkbox" name="same-info" id="same-info" />
+            <label for="same-info">Different billing address</label>
+          </li>
+        </ul>
+      </fieldset>
+      <h2>Billing Address</h2>
+      <fieldset name="billing-info">
+        <ul>
+              <li>
+                <label for="bfirst-name">First Name</label>
+                <input type="text" name="bfirst-name" id="bfirst-name" required/>
+              </li>
+              <li>
+                <label for="blast-name">Last Name</label>
+                <input type="text" name="blast-name" id="blast-name" required/>
+              </li>
+              <li>
+                <label for="company">Company(Optional)</label>
+                <input type="text" name="bcompany" id="bcompany" />
+              </li>
+              <li>
+                <label for="baddress">Address</label>
+                <input type="text" name="baddress" id="baddress" required/>
+              </li>
+              <li>
+                <label for="bapartment">Apartment(Optional)</label>
+                <input type="text" name="bapartment" id="bapartment" />
+              </li>
+              <li>
+                <label for="bcity">City</label>
+                <input type="text" name="bcity" id="bcity" required/>
+              </li>
+              <li>
+                <label for="bstate">State</label>
+                <select name="bstate" id="bstate" required >
+                    <option value="">Alabama</option>
+                    <option value="">Alaska</option>
+                    <option value="">Arizona</option>
+                    <option value="">Arkansas</option>
+                    <option value="">California</option>
+                    <option value="">Colorado</option>
+                    <option value="">Connecticut</option>
+                    <option value="">Delaware</option>
+                    <option value="">District Of Culumbia</option>
+                    <option value="">Florida</option>
+                    <option value="">Georgia</option>
+                    <option value="">Hawaii</option>
+                    <option value="">Idaho</option>
+                    <option value="">Illinois</option>
+                    <option value="">Indiana</option>
+                    <option value="">Iowa</option>
+                    <option value="">Kansas</option>
+                    <option value="">Kentucky</option>
+                    <option value="">Louisiana</option>
+                    <option value="">Maine</option>
+                    <option value="">Maryland</option>
+                    <option value="">Massachusetts</option>
+                    <option value="">Michigan</option>
+                    <option value="">Minnesota</option>
+                    <option value="">Mississippi</option>
+                    <option value="">Missouri</option>
+                    <option value="">Montana</option>
+                    <option value="">Nebraska</option>
+                    <option value="">Nevada</option>
+                    <option value="">New Hampshire</option>
+                    <option value="">New Jersey</option>
+                    <option value="">New Mexico</option>
+                    <option value="">New York</option>
+                    <option value="">North Carulina</option>
+                    <option value="">North Dakota</option>
+                    <option value="">Ohio</option>
+                    <option value="">Oklahoma</option>
+                    <option value="">Oregon</option>
+                    <option value="">Pennsylvania</option>
+                    <option value="">Rhode Island</option>
+                    <option value="">South Carulina</option>
+                    <option value="">South Dakota</option>
+                    <option value="">Tennessee</option>
+                    <option value="">Texas</option>
+                    <option value="">Utah</option>
+                    <option value="">Vermont</option>
+                    <option value="">Virginia</option>
+                    <option value="">Washington</option>
+                    <option value="">West Virginia</option>
+                    <option value="">Wisconsin</option>
+                    <option value="">Wyoming</option>
+                  </select>
+              </li>
+        </ul>
+      </fieldset>
+      <article id="shop-Cart">
+      <ul>
+      <li>
+        <h3>My Cart</h3>
+      </li>
+      <li>
+        <p>Item 1</p>
+        <p>$24.99</p>
+      </li>
+      <li>
+        <p>Tax: </p>
+        <p>$00.99</p>
+      </li>
+      <li>
+        <p>Total: </p>
+        <p>$25.98</p>
+      </li>
+    </ul>
+    </article>
+      <button type="submit">Continue to Billing</button>
+
+    </form>
+  </main>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

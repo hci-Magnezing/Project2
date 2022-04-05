@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" id="billing-page">
+<head>
+  <title>Log In to Company Inc.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+</head>
+<body>
+  <header id="header">
+    <h1>Company Inc.</h1>
+  </header>
+
+  <main id="main">
+    <form name="billing" action="../thankyou/" aria-labelledby="label-billing" method="get">
+      <h2 id="form-label">Payment Information</h2>
+
+      <fieldset name="payment-info">
+        <ol>
+          <li>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" required/>
+          </li>
+          <li>
+            <label for="cnum">Card number</label>
+            <input type="text" id="cnum" name="cardnumber" required/>
+          </li>
+          <li>
+            <label for="expmonth">Experation Month</label>
+            <input type="text" name="expmonth" id="expmonth" required/>
+          </li>
+          <li>
+            <label for="expyear">Experation Year</label>
+            <input type="number" name="expyear" id="expyear" placeholder="YYYY" maxlength="4" required/>
+          </li>
+          <li>
+            <label for="vnumber">Security Code</label>
+            <input type="text" name="vnumber" id="vnumber" maxlength="3" required/>
+          </li>
+        </ol>
+      </fieldset>
+      <article id="shop-Cart">
+
+      <ul>
+        <li>
+          <h3>My Cart</h3>
+        </li>
+        <li>
+          <p>Item 1</p>
+          <p>$24.99</p>
+        </li>
+        <li>
+          <p>Tax: </p>
+          <p>$00.99</p>
+        </li>
+        <li>
+          <p>Total: </p>
+          <p>$25.98</p>
+        </li>
+      </ul>
+    </article>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </main>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

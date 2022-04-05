@@ -1,0 +1,72 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+/* Color Pallete http://paletton.com/#uid=13r0u0kgYDn6SVecfN7l0vcpmrW
+
+/* Begin site styles below */
+html {
+  color: #000;
+  background-color: #5C9DB9;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 1.125em; /* 18/16 == 1.125em */
+  line-height: 1.333em; /* 24/18 == 1.333em */
+  padding: 0.9375rem;
+}
+
+/*  Base Styles*/
+
+h1 {
+  color: #000;
+  font-size: 1.953rem;
+  line-height: 2.441rem;
+  font-weight: bold;
+}
+
+header {
+  text-align: center;
+}
+
+#home-page main {
+  padding-top: 1.25rem;
+  text-align: center;
+}
+
+#shop-Cart {
+  display: none;
+
+}
+
+h2 {
+  color: #000;
+  font-size: 1.563rem; /* 30/18 == 1.667em */
+  line-height: 1.953rem; /* 36/30 == 1.12em */
+  font-weight: bold;
+}
+
+button {
+  padding: 0.625rem 1.25rem ;
+  background-color: #BDDFEE;
+  border: none;
+  color: #000;
+  border-radius: 0.75rem;
+}
+
+
+
+fieldset[aria-hidden="true"] {
+  display: none;
+}
+
+
+@media screen and (min-width: 31.25rem) {
+  #shop-Cart {
+    display: grid;
+    text-align: right;
+    font-size: 1.953rem;
+    line-height: 2.441rem;
+  }
+}
