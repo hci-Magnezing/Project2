@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" id="cart-page">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-    <link rel="stylesheet" href="../assets/css/screen.css" />
-    <title>Cart</title>
-  </head>
-  <body>
-    <main id="main">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+  <title>Cart</title>
+</head>
+<body>
+  <main id="main">
+    <section id="products">
       <header>
         <h1>Items</h1>
       </header>
@@ -192,7 +193,31 @@
           </ul>
         </li>
       </ul>
-    </main>
-    <script src="../assets/js/site.js"></script>
-  </body>
+    </section>
+
+    <section id="shopping-total">
+      <header>
+        <h1>Order Total</h1>
+      </header>
+      <ul id="cost-listing">
+        <li>
+          <p class="charge">Subtotal:</p>
+          <p class="cost">$</p>
+        </li>
+        <li>
+          <p class="charge">Tax:</p>
+          <p class="cost">$</p>
+        </li>
+        <li>
+          <p class="charge">Total:</p>
+          <p class="cost">$</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <input type="button">Continue to shipping</button>
+  </main>
+  <script src="../assets/js/site.js"></script>
+</body>
 </html>
