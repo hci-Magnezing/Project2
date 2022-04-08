@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 
 var html = document.querySelector('html');
@@ -24,7 +24,7 @@ if (html.id === 'home-page') {
       newAccountFieldset.setAttribute('disabled', 'disabled');
       newAccountFieldset.setAttribute('aria-hidden', 'true');
     }
-  })};
+  });}
 if (html.id === 'shipping-page') {
   var sameInfoFieldset = document.querySelector('fieldset[name="billing-info"]');
   var sameInfocheckbox = document.querySelector('#same-info');
@@ -42,7 +42,7 @@ if (html.id === 'shipping-page') {
       sameInfoFieldset.setAttribute('disabled', 'disabled');
       sameInfoFieldset.setAttribute('aria-hidden', 'true');
     }
-  })};
+  });}
 
 if (html.id === 'billing-page') {
     // Logic for billing form
@@ -61,6 +61,10 @@ if (html.id === 'home-page') {
   var form = document.querySelector('form[name=login]');
   form.addEventListener('submit',handleFormSubmission);
 
+}
+if (html.id === 'cart-page') {
+  var button = document.querySelector('input[type=button]');
+  button.addEventListener('click', calc);
 }
 
 function fillBilling() {
@@ -223,3 +227,28 @@ function throttle(callback, limit) {
     }
   };
 }
+
+/*--------------------------------------*/
+var amount = document.querySelectorAll('.price');
+var item = document.querySelectorAll('.price');
+//var totalPrice = document.querySelectorAll('.total-price');
+//var subtotalPrice = document.querySelectorAll('.subtotal-price');
+var taxPrice = document.querySelectorAll('.tax-price');
+
+function calc (){
+  var total = 0;
+  var subtotal = 0;
+  var tax = 0;
+  for (var i = 0; i < amount.length; i++) {
+    subtotal = subtotal + amount[i].parseInt * item[i].parseInt;
+  }
+  total = subtotal * 1.05;
+  updatePrices(subtotal, total, tax);
+}
+
+function updatePrices(subtotal,total, tax){
+  subtotalPrice.textContent = "$ " + subtotal;
+  document.querySelectorAll('.total-price').textContent = "$ " + total;
+  document.querySelectorAll('.subtotal-price').textContent = "$ " + total;
+}
+/*--------------------------------------*/
