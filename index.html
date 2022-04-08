@@ -1,60 +1,223 @@
 <!DOCTYPE html>
-<html lang="en" id="home-page">
+<html lang="en" id="cart-page">
 <head>
-  <title>Log In to ConcertGeek</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-  <link rel="stylesheet" href="assets/css/screen.css" />
+  <link rel="stylesheet" href="../assets/css/screen.css" />
+  <title>ConcertGeek: Cart</title>
 </head>
 <body>
-  <header id="header">
-    <h1>ConcertGeek</h1>
-  </header>
-
   <main id="main">
-    <form name="login" action="shipping/." aria-labelledby="login-label" method="get">
-      <h2 id="login-label">Log Into or Create Account</h2>
-
-      <fieldset name="returning">
-        <ol>
-          <li>
-            <label for="email">Email address</label>
-            <input type="email" name="email" id="email" required/>
-          </li>
-          <li>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required/>
-          </li>
-          <li>
-            <input type="checkbox" name="create" id="create" />
-            <label for="create">I need to create an account</label>
-          </li>
-        </ol>
-      </fieldset>
-
-      <fieldset name="new">
-        <ol>
-          <li>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required/>
-          </li>
-          <li>
-            <label for="birthday">Birthday</label>
-            <input type="date" name="birthday" id="birthday" required/>
-          </li>
-          <li>
-              <label for="phone">Phone Number</label>
-              <input type="tel" name="phone" id="phone" required/>
+    <section id="products">
+      <header>
+        <h1>Items</h1>
+      </header>
+      <ul class="items">
+        <li>
+          <ul id="ArianaGrande_Sweatshirt" class="details">
+            <img class="icon" src="../assets/images/ArianaGrande_Sweatshirt.png" alt="White Graphic Sweatshirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Ariana Grande Sweatshirt</h2>
             </li>
-        </ol>
-      </fieldset>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$80.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
 
-      <button type="submit">Log In</button>
+        <li>
+          <ul id="Nirvana_Tshirt" class="details">
+            <img class="icon" src="../assets/images/Nirvana_Dead_Smile_Tshirt.webp" alt="Black Smily Face T-Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Nirvana T-Shirt</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$70.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
 
-    </form>
-      <a id="to-shipping" href="shipping/.">Continue to Checkout as Guest</a>
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/images/EltonJohn_LongSleeveShirt.png" alt="White Long Sleeve Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Elton John Long Sleeve Shirt</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$90.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/images/LukeBryan_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Luke Bryan T-Shirt with Name</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$50.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/Queen_Emblem_Tshirt.png" alt="Black T-Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Queen Royal Emblem T-Shirt</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$45.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/images/RedHotChiliPeppers_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Red Hot Chili Peppers Classic Tee</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$25.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/images/TheWeeknd_Jacket.png" alt="Black Jacket" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>The Weeknd Custom Graphic Jacket</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$200.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="../assets/images/TylerTheCreator_Igor_Tshirt.jpeg" alt="Pink T-Shirt" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>Limited Edition Igor T-Shirt</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$110.00</h2>
+              <input type="button" class="add_to_cart" value="Add to Cart" />
+              <input type="button" class="remove_from_cart" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="" alt="" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>item 9</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$</h2>
+              <input type="button" class="add" value="add" />
+              <input type="button" class="remove" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="" alt="" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>item 10</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$</h2>
+              <input type="button" class="add" value="add" />
+              <input type="button" class="remove" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="" alt="" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>item 11</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$</h2>
+              <input type="button" class="add" value="add" />
+              <input type="button" class="remove" value="Remove" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul class="details">
+            <img class="icon" src="" alt="" />   <!--add images of products-->
+            <li class="item-name">
+              <h2>item 12</h2>
+            </li>
+            <li class="amount">
+              <input type="button" class="subtract" value="subtract" />
+              <h2 class="price">$</h2>
+              <input type="button" class="add" value="add" />
+              <input type="button" class="remove" value="Remove" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="shopping-total">
+      <header>
+        <h1>Order Total</h1>
+      </header>
+      <ul id="cost-listing">
+        <li>
+          <p class="subtotal">Subtotal:</p>
+          <p class="subtotal-price">$</p>
+        </li>
+        <li>
+          <p class="tax">Tax:</p>
+          <p class="tax-price">$</p>
+        </li>
+        <li>
+          <p class="total">Total:</p>
+          <p class="total-price">$</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <input type="button">Continue to shipping</button>
   </main>
-
-  <script src="assets/js/site.js"></script>
+  <script src="../assets/js/site.js"></script>
 </body>
 </html>
