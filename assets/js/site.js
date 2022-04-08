@@ -73,7 +73,7 @@ function fillBilling() {
   // grab the user input
   var x = jsObject.shipname;
   console.log(x);
-  var shipisbill = document.querySelector('#shipisbill').checked;
+  var shipisbill = document.querySelector('#same-info').checked;
 
   if (shipisbill == true) {
     // set input fields the same as ship
