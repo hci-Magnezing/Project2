@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-  <link rel="stylesheet" href="../assets/css/screen.css" />
+  <link rel="stylesheet" href="assets/css/screen.css" />
   <title>ConcertGeek: Cart</title>
 </head>
 <body>
   <main id="main">
     <section id="products">
       <header>
-        <h1>Items</h1>
+        <h1>ConcertGeek</h1>
       </header>
       <nav>
         <a id="to-login" href="./login-page/">Continue to Checkout</a>
       </nav>
+      <form name="cart-page" action="shipping/" aria-labelledby="label-cart-page" method="get">
       <ul class="items">
         <li>
           <ul id="ArianaGrande_Sweatshirt" class="details">
-            <img class="icon" src="../assets/images/ArianaGrande_Sweatshirt.png" alt="White Graphic Sweatshirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/ArianaGrande_Sweatshirt.png" alt="White Graphic Sweatshirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Ariana Grande Sweatshirt</h2>
             </li>
@@ -33,7 +34,7 @@
 
         <li>
           <ul id="Nirvana_Tshirt" class="details">
-            <img class="icon" src="../assets/images/Nirvana_Dead_Smile_Tshirt.webp" alt="Black Smily Face T-Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/Nirvana_Dead_Smile_Tshirt.webp" alt="Black Smily Face T-Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Nirvana T-Shirt</h2>
             </li>
@@ -48,7 +49,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/images/EltonJohn_LongSleeveShirt.png" alt="White Long Sleeve Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/EltonJohn_LongSleeveShirt.png" alt="White Long Sleeve Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Elton John Long Sleeve Shirt</h2>
             </li>
@@ -63,7 +64,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/images/LukeBryan_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/LukeBryan_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Luke Bryan T-Shirt with Name</h2>
             </li>
@@ -78,7 +79,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/Queen_Emblem_Tshirt.png" alt="Black T-Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/Queen_Emblem_Tshirt.png" alt="Black T-Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Queen Royal Emblem T-Shirt</h2>
             </li>
@@ -93,7 +94,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/images/RedHotChiliPeppers_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/RedHotChiliPeppers_Tshirt.webp" alt="Black T-Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Red Hot Chili Peppers Classic Tee</h2>
             </li>
@@ -108,7 +109,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/images/TheWeeknd_Jacket.png" alt="Black Jacket" />   <!--add images of products-->
+            <img class="icon" src="assets/images/TheWeeknd_Jacket.png" alt="Black Jacket" />   <!--add images of products-->
             <li class="item-name">
               <h2>The Weeknd Custom Graphic Jacket</h2>
             </li>
@@ -123,7 +124,7 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="../assets/images/TylerTheCreator_Igor_Tshirt.jpeg" alt="Pink T-Shirt" />   <!--add images of products-->
+            <img class="icon" src="assets/images/TylerTheCreator_Igor_Tshirt.jpeg" alt="Pink T-Shirt" />   <!--add images of products-->
             <li class="item-name">
               <h2>Limited Edition Igor T-Shirt</h2>
             </li>
@@ -138,13 +139,13 @@
 
         <li>
           <ul class="details">
-            <img class="icon" src="" alt="" />   <!--add images of products-->
+            <img class="icon" src="assets/images/plushie.jpg" alt="plushie" />   <!--add images of products-->
             <li class="item-name">
-              <h2>item 9</h2>
+              <h2>Nessie Plushie</h2>
             </li>
             <li class="amount">
               <input type="button" class="subtract" value="subtract" />
-              <h2 class="price">$</h2>
+              <h2 class="price">$ 1,000,000</h2>
               <input type="button" class="add" value="add" />
               <input type="button" class="remove" value="Remove" />
             </li>
@@ -219,8 +220,9 @@
     </section>
 
 
-    <input type="button">Continue to shipping</button>
+    <button type="submit">Continue to shipping</button>
+    </form>
   </main>
-  <script src="../assets/js/site.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

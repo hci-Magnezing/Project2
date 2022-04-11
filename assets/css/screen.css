@@ -46,6 +46,9 @@ h2 {
   line-height: 1.953rem; /* 36/30 == 1.12em */
   font-weight: bold;
 }
+.details h2{
+  font-size: 18px;
+}
 
 button {
   padding: 0.625rem 1.25rem ;
@@ -55,7 +58,16 @@ button {
   border-radius: 0.75rem;
 }
 
-
+.details {
+  display: flex;
+  margin: 1em;
+  /*padding: 0.5em;*/
+  background-color: #FFF;
+  box-shadow: 3px 0px 2px black; /* for visuals*/
+}
+img {
+  max-width: 25%;
+}
 
 fieldset[aria-hidden="true"] {
   display: none;
