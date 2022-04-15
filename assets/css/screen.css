@@ -74,12 +74,12 @@ h2 {
   padding-right: 0.5em;
 }
 .item-name {
-  max-width: 50%;
+  max-width: 35%;
 }
 .amount {
   display: flex;
   flex-wrap: wrap;
-  max-width: 25%;
+  max-width: 35%;
   padding-top: 4.5em;
   justify-content: space-between;
   align-items: baseline;
@@ -93,7 +93,7 @@ h2 {
   background-color: #0F0;
 }
 img {
-  max-width: 25%;
+  max-width: 30%;
 }
 
 fieldset[aria-hidden="true"] {
