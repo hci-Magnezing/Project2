@@ -50,7 +50,7 @@ h2 {
   font-size: 18px;
 }
 
-button {
+.navi {
   padding: 0.625rem 1.25rem ;
   background-color: #BDDFEE;
   border: none;
@@ -62,8 +62,24 @@ button {
   display: flex;
   margin: 1em;
   /*padding: 0.5em;*/
+  justify-content: space-around;
   background-color: #FFF;
   box-shadow: 3px 0px 2px black; /* for visuals*/
+}
+.details input {
+  height: 2em;
+}
+.amount {
+  display: flex;
+  position: relative;
+  padding-top: 4.5em;
+  gap: 1em;
+}
+.subtract{
+  background-color: #F00;
+}
+.add_to_cart {
+  background-color: #0F0;
 }
 img {
   max-width: 25%;
