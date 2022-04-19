@@ -50,7 +50,7 @@ h2 {
   font-size: 18px;
 }
 
-button {
+.navi {
   padding: 0.625rem 1.25rem ;
   background-color: #BDDFEE;
   border: none;
@@ -60,13 +60,40 @@ button {
 
 .details {
   display: flex;
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   /*padding: 0.5em;*/
+  justify-content: space-between;
   background-color: #FFF;
   box-shadow: 3px 0px 2px black; /* for visuals*/
 }
+.details input {
+  height: 2em;
+  padding-right: 0.5em;
+}
+.item-name {
+  max-width: 35%;
+}
+.amount {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 35%;
+  padding-top: 4.5em;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-grow: 2;
+  gap: 0.5em;
+}
+.subtract{
+  background-color: #F00;
+}
+.add_to_cart {
+  background-color: #0F0;
+}
 img {
-  max-width: 25%;
+  max-width: 30%;
 }
 
 fieldset[aria-hidden="true"] {
