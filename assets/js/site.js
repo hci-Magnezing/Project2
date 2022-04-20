@@ -309,3 +309,50 @@ function loadCartFromStorage() {
 function saveCartToStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+//Cart Functionality
+
+function cartAddItem(name, quantity=1) {
+  if (quantity <= 0) || !(name in cartItems)
+    return false;
+
+  if(!(name in cart)) {
+    cart[name] = quantity
+  }
+  else {
+    cart[name] += quantity
+  }
+
+  updateItemAmount();
+  saveCartToStorage();
+  return true;
+}
+
+function cartRemoveItem(name) {
+  if (!(name in cart))
+    return false;
+
+  delete cart[name];
+
+  updateItemAmount();
+  saveCartToStorage();
+}
+
+function cartSetItemAmount(name, quantity=1){
+  if (!(name in cartItems) || quantity <= 0)
+    return false;
+
+  cart[name] = quantity;
+
+  updateItemAmount();
+  saveCartToStorage();
+}
+
+function updateItemAmount() {
+  let cartSize = gerCartSize();
+  let cartTitle = document.querySelector("#cart-items-container h1");
+   if(cartTitle){
+     cartTitle.innerHTML = cartSize > 1 ? `Shopping Cart(${getCartSize()} Items)`
+                                        : `Shopping Cart(${getCartSize()} Item)`;
+   }
+ }
