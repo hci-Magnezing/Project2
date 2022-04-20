@@ -292,3 +292,20 @@ function updatePrices(subtotal,total, tax){
       price: 23.00
   }
 }
+
+var cart = loadCartFromStorage();
+
+UpdateItemQuantity();
+
+//Local Storage Functions
+function loadCartFromStorage() {
+  if (localStorage.getItem("cart")) {
+   return JSON.parse(localStorage.getItem("cart"));
+ } else {
+   return {};
+ }
+}
+
+function saveCartToStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
