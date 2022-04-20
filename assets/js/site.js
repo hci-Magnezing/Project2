@@ -366,3 +366,78 @@ function updateItemAmount() {
 
   return count;
 }
+function updateSummary() {
+  let summary = document.getElementById("cart-summary")
+  if (!summary) { // Should not be called on pages without summary display
+    console.log("This page has no summary.")
+    return
+  }
+
+  let totListElem = summary.querySelector("#cost-total").parentElement
+  let subtotListElem = summary.querySelector("#cost-subtotal").parentElement
+  let taxListElem = summary.querySelector("#cost-tax").parentElement
+
+  let totValueElem = totListElem.getElementsByClassName("value")[0]
+  let subtotValueElem = subtotListElem.getElementsByClassName("value")[0
+  let taxValueElem = taxListElem.getElementsByClassName("value")[0]
+
+  let total = 0, subtotal = 0, tax = 0;
+
+  for (const [title, count] of Object.entries(cart)) {
+    if (title in cartProducts) {
+      if (isNaN(count) || count <= 0) {
+        console.log(`ERROR: ${title} has invalid count.`)
+        continue
+      }
+
+      let productDetails = cartProducts[title]
+      total = subtotal += (productDetails.price * count)
+    } else {
+      console.log(`ERROR: "${title}" Not found in cartItems`)
+    }
+  }
+
+  tax = subtotal * (6.25/100) // 6.25%
+  total = subtotal + tax;
+
+  totValueElem.textContent = `$${total}`
+  subtotValueElem.textContent = `$${subtotal}`
+  taxValueElem.textContent = `$${tax}`
+}
+
+// For pages with main containers
+var pageMain = document.querySelector("main")
+
+
+if (pageMain && pageMain.id === "home-page") {
+  // ==============================
+  // ===== Cart Functionality =====
+  // ==============================
+  var products = document.querySelectorAll(".products");
+
+  products.forEach(product => {
+    product.addEventListener("click", function(event) {
+      let title = this.querySelector(".details").textContent.trim()
+      let price = this.querySelector(".amount").textContent.trim()
+      price = price.match(/\d+/g) // Extract digits
+
+      if (price.length > 0) {
+        price = parseInt(price[0]) // Set as integer
+      } else {
+        console.log(`ERROR PARSING PRICE: ${title}`)
+        return
+      }
+
+      if (!(title in cartItems)) {
+        console.log(`TITLE NOT FOUND: ${title}`)
+        console.log("!! FIX ELEMENT !!", this)
+        return
+      }
+
+      if (!cartAddProduct(title)) {
+        console.log(`ERROR ADDING ${title} TO CART`)
+        console.log("!! FIX ELEMENT !!", this)
+        return
+      }
+    })
+  })
