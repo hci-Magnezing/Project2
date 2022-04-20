@@ -356,3 +356,13 @@ function updateItemAmount() {
                                         : `Shopping Cart(${getCartSize()} Item)`;
    }
  }
+
+ function getCartSize() {
+  let count = 0;
+
+  Object.values(cart).forEach(item => {
+    count += parseInt(item);
+  })
+
+  return count;
+}
