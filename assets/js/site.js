@@ -155,6 +155,8 @@ function writeJsonToLocalStorage(keyName, jsObject) {
 
 function destroyFormDataInLocalStorage(formName) {
   localStorage.removeItem(formName);
+}function saveCartToStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 function restoreFormDataFromLocalStorage(formName) {
@@ -231,8 +233,8 @@ function throttle(callback, limit) {
 /*--------------------------------------*/
 var amount = document.querySelectorAll('.price');
 var item = document.querySelectorAll('.price');
-//var totalPrice = document.querySelectorAll('.total-price');
-//var subtotalPrice = document.querySelectorAll('.subtotal-price');
+var totalPrice = document.querySelectorAll('.total-price');
+var subtotalPrice = document.querySelectorAll('.subtotal-price');
 var taxPrice = document.querySelectorAll('.tax-price');
 
 function calc (){
@@ -252,3 +254,41 @@ function updatePrices(subtotal,total, tax){
   document.querySelectorAll('.subtotal-price').textContent = "$ " + total;
 }
 /*--------------------------------------*/
+  var cartItems = {
+    "Ariana Grande Sweatshirt": {
+      price: 80.00
+  },
+    "Nirvana T-Shirt": {
+      price: 70.00
+  },
+    "Elton John Long Sleeve Shirt": {
+      price: 90.00
+  },
+    "Luke Bryan T-Shirt with Name": {
+      price: 50.00
+  },
+    "Queen Royal Emblem T-Shirt": {
+      price: 45.00
+  },
+    "Red Hot Chili Peppers Classic Tee": {
+      price: 25.00
+  },
+    "The Weeknd Custom Graphic Jacket": {
+      price: 200.00
+  },
+    "Limited Edition Igor T-Shirt": {
+      price: 110.00
+  },
+    "Nessie Plushie": {
+      price: 1000000.00
+  },
+    "Item 10": {
+      price: 47.00
+  },
+    "Item 11": {
+      price: 128.00
+  },
+    "Item 12": {
+      price: 23.00
+  }
+}
