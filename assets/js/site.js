@@ -452,7 +452,6 @@ if (pageForm && pageForm.id == "cart-page") {
   // Remove/update element in cart
   function getProductTemplate() {
     let templateHTML = `
-      <img class="icon" src="../assets/img/trophy.png" alt="Certificate Image">
       <ul class="details">
         <li class="title"></li>
       </ul>
