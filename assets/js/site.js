@@ -8,7 +8,7 @@ var html = document.querySelector('html');
 html.classList.add('js');
 
 
-if (html.id === 'home-page') {
+if (html.id === 'login-page') {
   var newAccountFieldset = document.querySelector('fieldset[name="new"]');
   var newAccountCheckbox = document.querySelector('#create');
 
@@ -57,7 +57,7 @@ if (html.id === 'shipping-page') {
   form.addEventListener('submit',handleFormSubmission);
   }
 
-if (html.id === 'home-page') {
+if (html.id === 'login-page') {
   var form = document.querySelector('form[name=login]');
   form.addEventListener('submit',handleFormSubmission);
 
@@ -295,7 +295,7 @@ function updatePrices(subtotal,total, tax){
 
 var cart = loadCartFromStorage();
 
-UpdateItemQuantity();
+updateItemAmount();
 
 //Local Storage Functions
 function loadCartFromStorage() {
@@ -313,7 +313,7 @@ function saveCartToStorage() {
 //Cart Functionality
 
 function cartAddItem(name, quantity=1) {
-  if (quantity <= 0) || !(name in cartItems)
+  if (quantity <= 0)
     return false;
 
   if(!(name in cart)) {
@@ -339,7 +339,7 @@ function cartRemoveItem(name) {
 }
 
 function cartSetItemAmount(name, quantity=1){
-  if (!(name in cartItems) || quantity <= 0)
+  if (!(name in cartItems))
     return false;
 
   cart[name] = quantity;
@@ -349,7 +349,7 @@ function cartSetItemAmount(name, quantity=1){
 }
 
 function updateItemAmount() {
-  let cartSize = gerCartSize();
+  let cartSize = getCartSize();
   let cartTitle = document.querySelector("#cart-items-container h1");
    if(cartTitle){
      cartTitle.innerHTML = cartSize > 1 ? `Shopping Cart(${getCartSize()} Items)`
@@ -367,30 +367,30 @@ function updateItemAmount() {
   return count;
 }
 function updateSummary() {
-  let summary = document.getElementById("cart-summary")
+  let summary = document.getElementById("details")
   if (!summary) { // Should not be called on pages without summary display
     console.log("This page has no summary.")
     return
   }
 
-  let totListElem = summary.querySelector("#cost-total").parentElement
-  let subtotListElem = summary.querySelector("#cost-subtotal").parentElement
-  let taxListElem = summary.querySelector("#cost-tax").parentElement
+  let totListElem = summary.querySelector("#total-price").parentElement
+  let subtotListElem = summary.querySelector("#subtotal-price").parentElement
+  let taxListElem = summary.querySelector("#tax-price").parentElement
 
   let totValueElem = totListElem.getElementsByClassName("value")[0]
-  let subtotValueElem = subtotListElem.getElementsByClassName("value")[0
+  let subtotValueElem = subtotListElem.getElementsByClassName("value")[0]
   let taxValueElem = taxListElem.getElementsByClassName("value")[0]
 
   let total = 0, subtotal = 0, tax = 0;
 
   for (const [title, count] of Object.entries(cart)) {
-    if (title in cartProducts) {
-      if (isNaN(count) || count <= 0) {
+    if (title in cart-items) {
+      if (count <= 0) {
         console.log(`ERROR: ${title} has invalid count.`)
         continue
       }
 
-      let productDetails = cartProducts[title]
+      let productDetails = cart-items[title]
       total = subtotal += (productDetails.price * count)
     } else {
       console.log(`ERROR: "${title}" Not found in cartItems`)
@@ -406,16 +406,16 @@ function updateSummary() {
 }
 
 // For pages with main containers
-var pageMain = document.querySelector("main")
+var pageMain = document.querySelector("home-page")
 
 
 if (pageMain && pageMain.id === "home-page") {
   // ==============================
   // ===== Cart Functionality =====
   // ==============================
-  var products = document.querySelectorAll(".products");
+  var items = document.querySelectorAll(".items");
 
-  products.forEach(product => {
+  products.forEach(item => {
     product.addEventListener("click", function(event) {
       let title = this.querySelector(".details").textContent.trim()
       let price = this.querySelector(".amount").textContent.trim()
@@ -424,20 +424,109 @@ if (pageMain && pageMain.id === "home-page") {
       if (price.length > 0) {
         price = parseInt(price[0]) // Set as integer
       } else {
-        console.log(`ERROR PARSING PRICE: ${title}`)
+        console.log(`error parsing price: ${title}`)
         return
       }
 
       if (!(title in cartItems)) {
-        console.log(`TITLE NOT FOUND: ${title}`)
+        console.log(`TITLE not found: ${title}`)
         console.log("!! FIX ELEMENT !!", this)
         return
       }
 
       if (!cartAddProduct(title)) {
-        console.log(`ERROR ADDING ${title} TO CART`)
+        console.log(`ERROR adding ${title} to cart`)
         console.log("!! FIX ELEMENT !!", this)
         return
       }
     })
   })
+}
+
+// For pages with form container
+var pageForm = document.forms[0]; // First form on page
+
+// Cart
+if (pageForm && pageForm.id == "cart-page") {
+  // Product Display Functionality
+  // Remove/update element in cart
+  function getProductTemplate() {
+    let templateHTML = `
+      <img class="icon" src="../assets/img/trophy.png" alt="Certificate Image">
+      <ul class="details">
+        <li class="title"></li>
+      </ul>
+      <section class="misc">
+        <h2 class="price"></h2>
+        <input type="button" class="remove" value="Remove">
+        <input type="number" class="quantity" value="0">
+      </section>
+    `
+
+    let product = document.createElement("li")
+    product.className = "cart-item"
+    product.innerHTML = templateHTML
+
+    return product
+  }
+
+  let cartContainer = document.getElementById("items")
+  let template = getProductTemplate() // Blank product element
+
+  // == Load Cart ==
+  for (const [title, count] of Object.entries(cart)) {
+    if (item-name in items) {
+      pageAddProduct(title, count)
+    } else {
+      console.log(`ERROR: "${title}" Not found in cart-items`)
+    }
+  }
+
+  function pageAddProduct(name, quantity=1) {
+    if (!(name in cart-items))
+      return false;
+
+    let productDetails = cart-items[name]
+
+    let titleElem = newProduct.querySelector(".title")
+    let descElem = newProduct.querySelector(".description")
+    let priceElem = newProduct.querySelector(".price")
+    let quantityElem = newProduct.querySelector(".quantity")
+
+    titleElem.textContent = name
+    descElem.textContent = productDetails.desc
+    priceElem.textContent = `$${productDetails.price}`
+    quantityElem.value = cart[name]
+
+    cartContainer.appendChild(newProduct)
+    return true
+  }
+
+  function pageRemoveProduct(itemElement) {
+    itemElement.remove();
+  }
+
+  let cartItemElements = document.querySelectorAll(".cart-item");
+
+  cartItemElements.forEach(item => {
+    // == Remove Button Functionality ==
+    let removeButton = item.querySelector(".remove");
+    let productName = item.querySelector(".item-name").textContent;
+
+    removeButton.addEventListener("click", function(event) {
+      pageRemoveProduct(item);
+      cartRemoveProduct(item-name);
+      updateSummary();
+    });
+
+    // == Quantity selector functionality ==
+    let quantityElem = item.querySelector(".item-quantity");
+
+    quantityElem.addEventListener("change", function(event) {
+      cartSetProductQuantity(productName, parseInt(event.target.value)); // parseInt() to avoid causing errors when displaying cart size
+      updateSummary();
+    })
+  })
+
+  updateSummary(); // Update summary display
+}
