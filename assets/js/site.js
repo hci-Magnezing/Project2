@@ -452,14 +452,14 @@ if (pageForm && pageForm.id == "cart-page") {
   // Remove/update element in cart
   function getProductTemplate() {
     let templateHTML = `
-      <ul class="details">
-        <li class="title"></li>
-      </ul>
-      <section class="misc">
+      <li class="items">
+        <ul class="details"></ul>
+      </li>
+      <ul class="amount">
         <h2 class="price"></h2>
         <input type="button" class="remove" value="Remove">
         <input type="number" class="quantity" value="0">
-      </section>
+      </ul>
     `
 
     let product = document.createElement("li")
