@@ -282,14 +282,14 @@ function updatePrices(subtotal,total, tax){
     "Nessie Plushie": {
       price: 1000000.00
   },
-    "Item 10": {
-      price: 47.00
+    "Creeper Mug": {
+      price: 30.00
   },
-    "Item 11": {
-      price: 128.00
+    "Sword": {
+      price: 2500.00
   },
-    "Item 12": {
-      price: 23.00
+    "Wood Log": {
+      price: 1950.00
   }
 }
 
