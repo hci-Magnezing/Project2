@@ -46,8 +46,8 @@ h2 {
   line-height: 1.953rem; /* 36/30 == 1.12em */
   font-weight: bold;
 }
-.details h2{
-  font-size: 18px;
+.details h2 {
+  font-size: 1rem;
 }
 
 .navi {
@@ -67,7 +67,7 @@ h2 {
   /*padding: 0.5em;*/
   justify-content: space-between;
   background-color: #FFF;
-  box-shadow: 3px 0px 2px black; /* for visuals*/
+  box-shadow: .166666667rem 0rem .111111111rem black; /* for visuals*/
 }
 .details input {
   height: 2em;
@@ -86,25 +86,25 @@ h2 {
   flex-grow: 2;
   gap: 0.5em;
 }
-.subtract{
+.subtract {
   background-color: #F00;
 }
-.add_to_cart {
+.add-to-cart {
   background-color: #0F0;
 }
-h5{
+h5 {
   background-color: #1b5fcc;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.main_bar a:link,
-.main_bar a:visited,
-.main_bar a:active
+.main-bar a:link,
+.main-bar a:visited,
+.main-bar a:active
 {
   color: inherit;
   text-decoration: none;
 }
-.main_bar a:hover{
+.main-bar a:hover {
   background-color: #1b38cc;
   /*visual*/
   padding: 0.58em;
