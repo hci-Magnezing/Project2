@@ -283,13 +283,13 @@ function updatePrices(subtotal,total, tax){
       price: 1000000.00
   },
     "Creeper Mug": {
-      price: 47.00
+      price: 30.00
   },
     "Sword": {
-      price: 128.00
+      price: 2500.00
   },
     "Wood Log": {
-      price: 23.00
+      price: 1950.00
   }
 }
 
